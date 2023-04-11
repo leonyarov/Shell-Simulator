@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <readline/readline.h> //provide function readline() that reads a line of text from user and returns it as a dynamically aclocated string.
+#include <readline/history.h> // manage the command history line
 
 typedef struct parseInfo
 {
