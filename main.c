@@ -1,7 +1,7 @@
 //Leon Yarovinski *********
 //Daniel Grounin 319191680
 
-#include "shell.h"
+#include "shell.c"
 
 int main(int argc, char **argv){
     int childPid;
