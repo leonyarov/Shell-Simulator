@@ -1,3 +1,6 @@
+//Leon Yarovinski *********
+//Daniel Grounin 319191680
+
 #include "shell.h"
 
 int main(int argc, char **argv){
