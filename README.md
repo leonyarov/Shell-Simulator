@@ -2,7 +2,7 @@
 Linux Shell Simulator, made in C in a Linux environment
 
 
-intallation:
+installation:
 
 1)sudo apt-get install tree
 2)sudo apt-get install libreadline-dev
