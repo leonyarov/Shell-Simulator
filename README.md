@@ -10,6 +10,6 @@ intallation:
 
 Enter the following commands:
 
-gcc main.c -o main -lreadline
-./main
+1)gcc main.c -o main -lreadline
+2)./main
 
