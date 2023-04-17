@@ -8,8 +8,8 @@ sudo apt-get install tree
 sudo apt-get install libreadline-dev
 
 
-run:
+Enter the following commands:
 
-Enter the following command:
-gcc main.c main -lreadline;./main
+gcc main.c -o main -lreadline
+./main
 
