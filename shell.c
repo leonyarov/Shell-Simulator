@@ -3,7 +3,7 @@
 
 
 
-#include "funcs.h"
+#include "shell.h"
 #define GRN "\e[0;32m"
 #define BGRN "\e[1;32m"
 #define BLU "\e[0;34m"
