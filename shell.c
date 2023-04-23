@@ -1,18 +1,7 @@
-//Leon Yarovinski *********
+//Leon Yarovinski 206817181
 //Daniel Grounin 319191680
 
-
-
 #include "shell.h"
-#define GRN "\e[0;32m"
-#define BGRN "\e[1;32m"
-#define BLU "\e[0;34m"
-#define BBLU "\e[1;34m"
-#define WHT "\e[0;37m"
-#define RED "\033[0;31m"
-#define READ 0
-#define WRITE 1
-
 
 void printPath(){
     char cwd[1024];
@@ -22,9 +11,6 @@ void printPath(){
     printf(BLU"%s:",cwd);
     printf(WHT);
 }
-
-
-
 
 
 parseInfo* parse(char* line){
@@ -61,11 +47,7 @@ parseInfo* parse(char* line){
 }
 
 
-
-
-
-
-void executeCommand(parseInfo* info) {
+void executeCommand(parseInfo * info){
     // If pipe
     if (info->pipe_index != -1) {
         execute_pipe(info->pipe_index, info->command[0]);
@@ -81,7 +63,7 @@ void executeCommand(parseInfo* info) {
     // General case - use execvp on the command
     else {
         // List of supported commands
-        char* supported_commands[] = { "pwd", "nano", "cat", "wc", "cp", "clear", "grep", "wget", "ls", "tree" };
+        char* supported_commands[] = { "pwd", "nano", "cat", "wc", "cp", "clear", "grep", "ls", "tree" };
 
         // Check if the command is supported
         int i;
