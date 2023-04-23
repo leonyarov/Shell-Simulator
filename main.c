@@ -1,15 +1,16 @@
-//Leon Yarovinski *********
+//Leon Yarovinski 206817181
 //Daniel Grounin 319191680
 
 
 #include "shell.c"
+#include "tree.c"
 
 int main(int argc, char** argv) {
     int childPid;
     char* cmdLine = NULL;
     parseInfo* info = NULL;
 
-    printf(BGRN"\n---------------STARTING CUSTOM SHELL---------------\n");
+    printf(BGRN"\n---------------STARTING OUR SHELL---------------\n");
     while (1) {
         printPath();
         cmdLine = readline(BGRN" $ ");
@@ -25,6 +26,13 @@ int main(int argc, char** argv) {
                 printf("%s NOT FOUND\n", info->command[1]);
                 freeInfo(info);
             }
+            continue;
+        }
+         else if (info->command && strcmp(info->command[0], "tree") == 0) {
+            char current_dir[1024];
+            getcwd(current_dir, sizeof(current_dir));
+            print_tree(current_dir, 0);
+            freeInfo(info);
             continue;
         }
 
